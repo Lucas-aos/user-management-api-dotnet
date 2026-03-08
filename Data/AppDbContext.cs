@@ -1,0 +1,18 @@
+// Informar a existência de uma tabela chamada Users baseada no "Model User".
+
+using Microsoft.EntityFrameworkCore;
+using UserManagementApi.Models;
+
+namespace UserManagementApi.Data
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
+        public DbSet<User> Users {get;set;}
+    }
+}
+
+
+
