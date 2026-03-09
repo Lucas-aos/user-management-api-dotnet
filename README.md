@@ -5,6 +5,7 @@
 ![.NET](https://img.shields.io/badge/.NET-ASP.NET%20Core-purple)
 ![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
+![API](https://img.shields.io/badge/API-REST-green)
 
 A simple RESTful API built with **ASP.NET Core** and **PostgreSQL** for managing users.
 
@@ -20,6 +21,8 @@ This project was created as a backend learning exercise to practice building API
 - PostgreSQL
 - Swagger (OpenAPI)
 - Git & GitHub
+- DTO Pattern
+- DataAnnotations
 
 ---
 
@@ -46,6 +49,20 @@ The API allows you to:
 | DELETE | /api/users/{id} | Delete a user |
 
 ---
+## Architecture
+
+The project follows a simple layered structure:
+
+```
+Controllers → handle HTTP requests  
+DTOs → define API request and response models  
+Models → represent database entities  
+Data → Entity Framework database context  
+Migrations → database schema history
+
+```
+
+DTOs are used to separate the API contract from the internal data model and to enable validation using DataAnnotations.
 
 ## Database
 
@@ -130,8 +147,12 @@ This project was built to practice:
 - Connecting a .NET API to PostgreSQL
 - Implementing CRUD operations
 - Using Git and GitHub for version control
+- Using DTOs to separate API contracts from domain models
+- Applying validation with DataAnnotations
 
 ---
+
+
 
 ## Author
 
