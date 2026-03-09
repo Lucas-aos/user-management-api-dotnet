@@ -1,5 +1,11 @@
 # User Management API
 
+![Status](https://img.shields.io/badge/status-in%20development-yellow)
+![C#](https://img.shields.io/badge/C%23-.NET-blue)
+![.NET](https://img.shields.io/badge/.NET-ASP.NET%20Core-purple)
+![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-blue)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
+
 A simple RESTful API built with **ASP.NET Core** and **PostgreSQL** for managing users.
 
 This project was created as a backend learning exercise to practice building APIs using **C#, Entity Framework Core, and PostgreSQL**.
