@@ -1,10 +1,8 @@
-using System.Runtime.Versioning;
 using Microsoft.AspNetCore.Mvc;
-using UserManagementApi.Models;
-using UserManagementApi.Data;
 using Microsoft.EntityFrameworkCore;
+using UserManagementApi.Data;
+using UserManagementApi.Models;
 using UserManagementApi.DTOs;
-
 
 namespace UserManagementApi.Controllers;
 
@@ -13,6 +11,7 @@ namespace UserManagementApi.Controllers;
 public class UsersController : ControllerBase
 {
     private readonly AppDbContext _context;
+
     public UsersController(AppDbContext context)
     {
         _context = context;
@@ -54,12 +53,12 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<UserResponseDto>> CreateUser(UserCreateDto userDto)
+    public async Task<ActionResult<UserResponseDto>> CreateUser(UserCreateDto dto)
     {
         var user = new User
         {
-            Name = userDto.Name,
-            Email = userDto.Email,
+            Name = dto.Name,
+            Email = dto.Email,
             CreatedAt = DateTime.UtcNow
         };
 
@@ -92,7 +91,7 @@ public class UsersController : ControllerBase
 
         return NoContent();
     }
-    
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteUser(int id)
     {

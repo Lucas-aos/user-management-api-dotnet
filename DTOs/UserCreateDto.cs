@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
+namespace UserManagementApi.DTOs;
+
 public class UserCreateDto
 {
     [Required]
