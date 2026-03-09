@@ -1,5 +1,6 @@
 # User Management API
 
+![Status](https://img.shields.io/badge/status-in%20development-yellow)
 ![C#](https://img.shields.io/badge/C%23-.NET-blue)
 ![.NET](https://img.shields.io/badge/.NET-ASP.NET%20Core-purple)
 ![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-blue)
